@@ -5,8 +5,12 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 
+const merge = require('merge-stream');
+
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+const imagemin = require('gulp-imagemin');
 
 const spritesmith = require('gulp.spritesmith');
 
@@ -72,11 +76,11 @@ gulp.task('images', function() {
 });
 
 gulp.task('sprite', function () {
-  var spriteStream = gulp.src('app/images/icon/*.png')
+  var spriteStream = gulp.src('app/images/icons/*.png')
     .pipe(spritesmith({
       imgName: 'sprite.png',
       imgPath: 'app/images/sprite.png',
-      retinaSrcFilter: ['app/images/icon/*@2x.png'],
+      retinaSrcFilter: 'app/images/icons/*@2x.png',
       retinaImgName: 'sprite@2x.png',
       retinaImgPath: 'app/images/sprite@2x.png',
       padding: 30,
@@ -85,12 +89,12 @@ gulp.task('sprite', function () {
 
   var imgStream = spriteStream.img
     .pipe(imagemin())
-    .pipe(gulp.dest('.tmp/assets/images'))
+    .pipe(gulp.dest('.tmp/styles/images'))
     .pipe(browserSync.reload({ stream: true }))
     .pipe($.size());
 
   var cssStream = spriteStream.css
-    .pipe(gulp.dest('.tmp/assets/styles'))
+    .pipe(gulp.dest('.tmp/styles/'))
     .pipe(browserSync.reload({ stream: true }))
     .pipe($.size());
 
