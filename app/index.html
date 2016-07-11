@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>kamet</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="/apple-touch-icon" href="/apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -28,19 +28,32 @@
     <![endif]-->
     
     <header>
-      <a href="#" class="logo"><img src="app/images/icons/k-logo.png" alt=""><span>karma</span></a>
+      <a href="#" class="logo"><img src="images/icons/k-logo.png" alt=""><span>karma</span></a>
 
-      <div class="menu">
-        <a href="#" class="active">Medical records</a>
+      <ul class="menu">
+        <li><a href="#" class="active">Medical records</a></li>
 
-        <a href="#">See a doctor</a>
+        <li><a href="#">See a doctor</a></li>
 
-        <a href="#"><img src="app/images/icons/user.png" alt=""> Sophie Bloggs</a>
-        <ul>
-          <li>Profile</li>
-          <li>Account</li>
-        </ul>
-      </div> 
+
+
+        <!-- Dropdown menu -->
+        <li class="nav-item nav-item-dropdown">
+          <a class="dropdown-trigger" href="#"><img src="images/icons/k-user.png" alt=""> Sophie Bloggs</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-item">
+              <a href="#">Profile</a>
+            </li>
+            <li class="dropdown-menu-item">
+              <a href="#">Account</a>
+            </li>
+            <li class="dropdown-menu-item">
+              <a href="#">Dropdown Item 3</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
     </header>
     
     <section class="body-wrapper">
@@ -63,7 +76,7 @@
           <li class="block-simple green-card">
             <a href="#">
               <div class="image-text">
-                <img src="app/images/icons/k-doctor.png">
+                <img src="images/icons/k-doctor.png">
                 <div>
                   <p>See a Doctor</p>
                   <small>Video, audio and chat consultation</small>
@@ -81,9 +94,9 @@
           <li class="block-simple">
             <a class="accordion-header">
               <div class="image-text">
-                <img src="app/images/doctor.png">
+                <img src="images/doctor.png">
                 <div>
-                  <p>Dr Arnold Ruth</p>
+                  <span>Dr Arnold Ruth</span>
                   <small>Yesterday  - 12:23</small>
                 </div>
               </div>
@@ -94,10 +107,10 @@
             </a>
             <section class="body-accordion">
 
-              <ul>
-                <li>
+              <ul class="accordion-details">
+                <li class="prescriptions">
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-med.png">
+                    <img src="images/icons/k-med.png">
                     <div>
                       <h5>Prescription collected</h5>
                       <ul>
@@ -107,7 +120,7 @@
                     </div>
                   </div>
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-locate.png">
+                    <img src="images/icons/k-locate.png">
                     <div>
                       <adresse>
                         Lloyds Pharmacy<br>
@@ -119,6 +132,7 @@
                   </div>
 
                   <div class="instructions">
+                    <h5>Instructions : </h5>
                     <p>Take 5 times a day on an empty stomach with a glass of water. Please contact us again if symptoms resist.</p>
                   </div>
 
@@ -126,7 +140,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-video.png">
+                    <img src="images/icons/k-video.png">
                     <div>
                       <h5>Replay video consultation</h5>
                       <small>8"23'</small>
@@ -137,7 +151,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-chat.png">
+                    <img src="images/icons/k-chat.png">
                     <div>
                       <h5>View web chat</h5>
                     </div>
@@ -156,9 +170,9 @@
           <li class="block-simple">
             <a class="accordion-header">
               <div class="image-text">
-                <img src="app/images/doctor.png">
+                <img src="images/doctor.png">
                 <div>
-                  <p>Dr Arnold Ruth</p>
+                  <span>Dr Arnold Ruth</span>
                   <small>Yesterday  - 12:23</small>
                 </div>
               </div>
@@ -169,10 +183,10 @@
             </a>
             <section class="body-accordion">
 
-              <ul>
-                <li>
+              <ul class="accordion-details">
+                <li class="prescriptions">
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-med.png">
+                    <img src="images/icons/k-med.png">
                     <div>
                       <h5>Prescription collected</h5>
                       <ul>
@@ -182,7 +196,7 @@
                     </div>
                   </div>
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-locate.png">
+                    <img src="images/icons/k-locate.png">
                     <div>
                       <adresse>
                         Lloyds Pharmacy<br>
@@ -194,6 +208,7 @@
                   </div>
 
                   <div class="instructions">
+                    <h5>Instructions : </h5>
                     <p>Take 5 times a day on an empty stomach with a glass of water. Please contact us again if symptoms resist.</p>
                   </div>
 
@@ -201,7 +216,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-video.png">
+                    <img src="images/icons/k-video.png">
                     <div>
                       <h5>Replay video consultation</h5>
                       <small>8"23'</small>
@@ -212,7 +227,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-chat.png">
+                    <img src="images/icons/k-chat.png">
                     <div>
                       <h5>View web chat</h5>
                     </div>
@@ -231,9 +246,9 @@
           <li class="block-simple">
             <a class="accordion-header">
               <div class="image-text">
-                <img src="app/images/doctor.png">
+                <img src="images/doctor.png">
                 <div>
-                  <p>Dr Arnold Ruth</p>
+                  <span>Dr Arnold Ruth</span>
                   <small>Yesterday  - 12:23</small>
                 </div>
               </div>
@@ -244,10 +259,10 @@
             </a>
             <section class="body-accordion">
 
-              <ul>
-                <li>
+              <ul class="accordion-details">
+                <li class="prescriptions">
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-med.png">
+                    <img src="images/icons/k-med.png">
                     <div>
                       <h5>Prescription collected</h5>
                       <ul>
@@ -257,7 +272,7 @@
                     </div>
                   </div>
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-locate.png">
+                    <img src="images/icons/k-locate.png">
                     <div>
                       <adresse>
                         Lloyds Pharmacy<br>
@@ -269,6 +284,7 @@
                   </div>
 
                   <div class="instructions">
+                    <h5>Instructions : </h5>
                     <p>Take 5 times a day on an empty stomach with a glass of water. Please contact us again if symptoms resist.</p>
                   </div>
 
@@ -276,7 +292,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-video.png">
+                    <img src="images/icons/k-video.png">
                     <div>
                       <h5>Replay video consultation</h5>
                       <small>8"23'</small>
@@ -287,7 +303,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-chat.png">
+                    <img src="images/icons/k-chat.png">
                     <div>
                       <h5>View web chat</h5>
                     </div>
@@ -306,9 +322,9 @@
           <li class="block-simple">
             <a class="accordion-header">
               <div class="image-text">
-                <img src="app/images/doctor.png">
+                <img src="images/doctor.png">
                 <div>
-                  <p>Dr Arnold Ruth</p>
+                  <span>Dr Arnold Ruth</span>
                   <small>Yesterday  - 12:23</small>
                 </div>
               </div>
@@ -319,10 +335,10 @@
             </a>
             <section class="body-accordion">
 
-              <ul>
-                <li>
+              <ul class="accordion-details">
+                <li class="prescriptions">
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-med.png">
+                    <img src="images/icons/k-med.png">
                     <div>
                       <h5>Prescription collected</h5>
                       <ul>
@@ -332,7 +348,7 @@
                     </div>
                   </div>
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-locate.png">
+                    <img src="images/icons/k-locate.png">
                     <div>
                       <adresse>
                         Lloyds Pharmacy<br>
@@ -344,6 +360,7 @@
                   </div>
 
                   <div class="instructions">
+                    <h5>Instructions : </h5>
                     <p>Take 5 times a day on an empty stomach with a glass of water. Please contact us again if symptoms resist.</p>
                   </div>
 
@@ -351,7 +368,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-video.png">
+                    <img src="images/icons/k-video.png">
                     <div>
                       <h5>Replay video consultation</h5>
                       <small>8"23'</small>
@@ -362,7 +379,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-chat.png">
+                    <img src="images/icons/k-chat.png">
                     <div>
                       <h5>View web chat</h5>
                     </div>
@@ -381,9 +398,9 @@
           <li class="block-simple">
             <a class="accordion-header">
               <div class="image-text">
-                <img src="app/images/doctor.png">
+                <img src="images/doctor.png">
                 <div>
-                  <p>Dr Arnold Ruth</p>
+                  <span>Dr Arnold Ruth</span>
                   <small>Yesterday  - 12:23</small>
                 </div>
               </div>
@@ -394,10 +411,10 @@
             </a>
             <section class="body-accordion">
 
-              <ul>
-                <li>
+              <ul class="accordion-details">
+                <li class="prescriptions">
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-med.png">
+                    <img src="images/icons/k-med.png">
                     <div>
                       <h5>Prescription collected</h5>
                       <ul>
@@ -407,7 +424,7 @@
                     </div>
                   </div>
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-locate.png">
+                    <img src="images/icons/k-locate.png">
                     <div>
                       <adresse>
                         Lloyds Pharmacy<br>
@@ -419,6 +436,7 @@
                   </div>
 
                   <div class="instructions">
+                    <h5>Instructions : </h5>
                     <p>Take 5 times a day on an empty stomach with a glass of water. Please contact us again if symptoms resist.</p>
                   </div>
 
@@ -426,7 +444,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-video.png">
+                    <img src="images/icons/k-video.png">
                     <div>
                       <h5>Replay video consultation</h5>
                       <small>8"23'</small>
@@ -437,7 +455,7 @@
                 <li>
 
                   <div class="image-text image-top">
-                    <img src="app/images/icons/k-chat.png">
+                    <img src="images/icons/k-chat.png">
                     <div>
                       <h5>View web chat</h5>
                     </div>
